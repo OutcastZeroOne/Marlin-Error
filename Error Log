@@ -1,0 +1,912 @@
+> Executing task in folder Marlin-2.0.x AIO: platformio run <
+
+Processing STM32F103RC_fysetc (platform: ststm32; board: genericSTM32F103RC; framework: arduino)
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Verbose mode can be enabled via `-v, --verbose` option
+CONFIGURATION: https://docs.platformio.org/page/boards/ststm32/genericSTM32F103RC.html
+PLATFORM: ST STM32 6.0.0 > STM32F103RC (48k RAM. 256k Flash)
+HARDWARE: STM32F103RCT6 72MHz, 48KB RAM, 256KB Flash
+DEBUG: Current (stlink) External (blackmagic, jlink, stlink)
+PACKAGES: 
+ - framework-arduinoststm32-maple 1.10000.190819 (1.0.0) 
+ - tool-stm32duino 1.0.1 
+ - toolchain-gccarmnoneeabi 1.70201.0 (7.2.1)
+Converting Marlin.ino
+LDF: Library Dependency Finder -> http://bit.ly/configure-pio-ldf
+LDF Modes: Finder ~ chain, Compatibility ~ soft
+Looking for TMCStepper library in registry
+Found: https://platformio.org/lib/show/5513/TMCStepper
+LibraryManager: Installing id=5513 @ >=0.6.2,<1.0.0
+Using cache: /Users/outcastzeroone/.platformio/.cache/72/6a70f906c548b2cee9147f8f4c763872
+TMCStepper @ 0.6.2 has been successfully installed!
+Looking for Adafruit NeoPixel library in registry
+Found: https://platformio.org/lib/show/28/Adafruit NeoPixel
+LibraryManager: Installing id=28
+Using cache: /Users/outcastzeroone/.platformio/.cache/8f/aac02c8620a54b8b6aa1bd52fcc39e8f
+Adafruit NeoPixel @ 1.4.0 has been successfully installed!
+LibraryManager: Installing U8glib-HAL
+Using cache: /Users/outcastzeroone/.platformio/.cache/a7/b7a9b473d1c239d9843ca943887cd0a7
+U8glib-HAL @ 0.4.1 has been successfully installed!
+LibraryManager: Installing Adafruit_MAX31865
+Using cache: /Users/outcastzeroone/.platformio/.cache/a2/23449b28298c957d725189a3dadfc3a2
+Adafruit_MAX31865 @ 1.2.0 has been successfully installed!
+Installing dependencies
+Looking for Adafruit BusIO library in registry
+Found: https://platformio.org/lib/show/6214/Adafruit BusIO
+LibraryManager: Installing id=6214
+Using cache: /Users/outcastzeroone/.platformio/.cache/e7/f8977bd028f02703f17bc10f1f6c05e7
+Adafruit BusIO @ 1.3.0 has been successfully installed!
+LibraryManager: Installing LiquidTWI2
+Using cache: /Users/outcastzeroone/.platformio/.cache/85/8b02db3fff9254d346da3ee4646b5f85
+LiquidTWI2 @ 0.0.0 has been successfully installed!
+LibraryManager: Installing Arduino-L6470
+Using cache: /Users/outcastzeroone/.platformio/.cache/07/12d08ea66c13f5976fdaab4c52dfcf07
+Arduino-L6470 @ 0.8.0 has been successfully installed!
+LibraryManager: Installing SailfishLCD
+Using cache: /Users/outcastzeroone/.platformio/.cache/e1/f7005198ad8e3a4b619768bbbcd33ae1
+SailfishLCD @ 0.0.0 has been successfully installed!
+LibraryManager: Installing SailfishRGB_LED
+Using cache: /Users/outcastzeroone/.platformio/.cache/ae/92268909fe23d8d88d696e4077aa46ae
+SailfishRGB_LED @ 0.0.0 has been successfully installed!
+LibraryManager: Installing SlowSoftI2CMaster
+Using cache: /Users/outcastzeroone/.platformio/.cache/57/ba98e6910d02720ff6cc39cb62b43957
+SlowSoftI2CMaster @ 0.0.0 has been successfully installed!
+LibraryManager: Installing SoftwareSerialM
+Using cache: /Users/outcastzeroone/.platformio/.cache/36/5b7d8e4c43fbe7dee68737c754562636
+SoftwareSerialM @ 1.0.0 has been successfully installed!
+Found 39 compatible libraries
+Scanning dependencies...
+Dependency Graph
+|-- <LiquidCrystal>
+|-- <TMCStepper> 0.6.2
+|   |-- <SoftwareSerialM> 1.0.0
+|-- <U8glib-HAL> 0.4.1
+|   |-- <Wire> 1.0
+|-- <Adafruit MAX31865 library> 1.2.0
+|   |-- <Adafruit BusIO> 1.3.0
+|   |   |-- <Wire> 1.0
+|-- <LiquidTWI2>
+|   |-- <Wire> 1.0
+|-- <Arduino-L6470> 0.8.0
+|-- <SailfishLCD>
+|-- <SailfishRGB_LED>
+|   |-- <Wire> 1.0
+|-- <SlowSoftI2CMaster>
+|-- <SoftwareSerialM> 1.0.0
+|-- <USBComposite for STM32F1> 0.91
+|-- <Wire> 1.0
+|-- <EEPROM>
+|-- <STM32ADC> 1.0
+Building in release mode
+Compiling .pio/build/STM32F103RC_fysetc/FrameworkArduinoVariant/board.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/FrameworkArduinoVariant/wirish/boards.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/FrameworkArduinoVariant/wirish/boards_setup.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/FrameworkArduinoVariant/wirish/start.S.o
+Compiling .pio/build/STM32F103RC_fysetc/FrameworkArduinoVariant/wirish/start_c.c.o
+Compiling .pio/build/STM32F103RC_fysetc/FrameworkArduinoVariant/wirish/syscalls.c.o
+Compiling .pio/build/STM32F103RC_fysetc/FrameworkArduino/HardwareSerial.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/FrameworkArduino/HardwareTimer.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/FrameworkArduino/IPAddress.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/FrameworkArduino/Print.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/FrameworkArduino/Stream.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/FrameworkArduino/WString.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/FrameworkArduino/avr/dtostrf.c.o
+Compiling .pio/build/STM32F103RC_fysetc/FrameworkArduino/cxxabi-compat.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/FrameworkArduino/ext_interrupts.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/FrameworkArduino/hooks.c.o
+Compiling .pio/build/STM32F103RC_fysetc/FrameworkArduino/itoa.c.o
+Compiling .pio/build/STM32F103RC_fysetc/FrameworkArduino/libmaple/adc.c.o
+Compiling .pio/build/STM32F103RC_fysetc/FrameworkArduino/libmaple/adc_f1.c.o
+Compiling .pio/build/STM32F103RC_fysetc/FrameworkArduino/libmaple/bkp_f1.c.o
+Compiling .pio/build/STM32F103RC_fysetc/FrameworkArduino/libmaple/dac.c.o
+Compiling .pio/build/STM32F103RC_fysetc/FrameworkArduino/libmaple/dma.c.o
+Compiling .pio/build/STM32F103RC_fysetc/FrameworkArduino/libmaple/dma_f1.c.o
+Compiling .pio/build/STM32F103RC_fysetc/FrameworkArduino/libmaple/exc.S.o
+Compiling .pio/build/STM32F103RC_fysetc/FrameworkArduino/libmaple/exti.c.o
+Compiling .pio/build/STM32F103RC_fysetc/FrameworkArduino/libmaple/exti_f1.c.o
+Compiling .pio/build/STM32F103RC_fysetc/FrameworkArduino/libmaple/flash.c.o
+Compiling .pio/build/STM32F103RC_fysetc/FrameworkArduino/libmaple/fsmc_f1.c.o
+Compiling .pio/build/STM32F103RC_fysetc/FrameworkArduino/libmaple/gpio.c.o
+Compiling .pio/build/STM32F103RC_fysetc/FrameworkArduino/libmaple/gpio_f1.c.o
+Compiling .pio/build/STM32F103RC_fysetc/FrameworkArduino/libmaple/i2c.c.o
+Compiling .pio/build/STM32F103RC_fysetc/FrameworkArduino/libmaple/i2c_f1.c.o
+Compiling .pio/build/STM32F103RC_fysetc/FrameworkArduino/libmaple/iwdg.c.o
+Compiling .pio/build/STM32F103RC_fysetc/FrameworkArduino/libmaple/nvic.c.o
+Compiling .pio/build/STM32F103RC_fysetc/FrameworkArduino/libmaple/pwr.c.o
+Compiling .pio/build/STM32F103RC_fysetc/FrameworkArduino/libmaple/rcc.c.o
+Compiling .pio/build/STM32F103RC_fysetc/FrameworkArduino/libmaple/rcc_f1.c.o
+Compiling .pio/build/STM32F103RC_fysetc/FrameworkArduino/libmaple/spi.c.o
+Compiling .pio/build/STM32F103RC_fysetc/FrameworkArduino/libmaple/spi_f1.c.o
+Compiling .pio/build/STM32F103RC_fysetc/FrameworkArduino/libmaple/stm32f1/performance/isrs.S.o
+Compiling .pio/build/STM32F103RC_fysetc/FrameworkArduino/libmaple/stm32f1/performance/vector_table.S.o
+Compiling .pio/build/STM32F103RC_fysetc/FrameworkArduino/libmaple/systick.c.o
+Compiling .pio/build/STM32F103RC_fysetc/FrameworkArduino/libmaple/timer.c.o
+Compiling .pio/build/STM32F103RC_fysetc/FrameworkArduino/libmaple/timer_f1.c.o
+Compiling .pio/build/STM32F103RC_fysetc/FrameworkArduino/libmaple/usart.c.o
+Compiling .pio/build/STM32F103RC_fysetc/FrameworkArduino/libmaple/usart_f1.c.o
+Compiling .pio/build/STM32F103RC_fysetc/FrameworkArduino/libmaple/usart_private.c.o
+Compiling .pio/build/STM32F103RC_fysetc/FrameworkArduino/libmaple/usb/stm32f1/usb.c.o
+Compiling .pio/build/STM32F103RC_fysetc/FrameworkArduino/libmaple/usb/stm32f1/usb_cdcacm.c.o
+Compiling .pio/build/STM32F103RC_fysetc/FrameworkArduino/libmaple/usb/stm32f1/usb_reg_map.c.o
+Compiling .pio/build/STM32F103RC_fysetc/FrameworkArduino/libmaple/usb/usb_lib/usb_core.c.o
+Compiling .pio/build/STM32F103RC_fysetc/FrameworkArduino/libmaple/usb/usb_lib/usb_init.c.o
+Compiling .pio/build/STM32F103RC_fysetc/FrameworkArduino/libmaple/usb/usb_lib/usb_mem.c.o
+Compiling .pio/build/STM32F103RC_fysetc/FrameworkArduino/libmaple/usb/usb_lib/usb_regs.c.o
+Compiling .pio/build/STM32F103RC_fysetc/FrameworkArduino/libmaple/util.c.o
+Compiling .pio/build/STM32F103RC_fysetc/FrameworkArduino/main.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/FrameworkArduino/new.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/FrameworkArduino/pwm.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/FrameworkArduino/sdio.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/FrameworkArduino/stm32f1/util_hooks.c.o
+Compiling .pio/build/STM32F103RC_fysetc/FrameworkArduino/stm32f1/wiring_pulse_f1.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/FrameworkArduino/stm32f1/wirish_debug.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/FrameworkArduino/stm32f1/wirish_digital_f1.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/FrameworkArduino/tone.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/FrameworkArduino/usb_serial.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/FrameworkArduino/wirish_analog.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/FrameworkArduino/wirish_digital.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/FrameworkArduino/wirish_math.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/FrameworkArduino/wirish_shift.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/FrameworkArduino/wirish_time.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/HAL/STM32F1/HAL.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/HAL/STM32F1/HAL_SPI.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/HAL/STM32F1/SPI.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/HAL/STM32F1/Servo.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/HAL/STM32F1/SoftwareSerial.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/HAL/STM32F1/dogm/u8g_com_stm32duino_fsmc.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/HAL/STM32F1/dogm/u8g_com_stm32duino_swspi.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/HAL/STM32F1/eeprom.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/HAL/STM32F1/eeprom_flash.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/HAL/STM32F1/eeprom_sdcard.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/HAL/STM32F1/msc_sd.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/HAL/STM32F1/onboard_sd.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/HAL/STM32F1/sdio.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/HAL/STM32F1/timers.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/HAL/STM32F1/watchdog.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/HAL/shared/HAL_spi_L6470.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/HAL/shared/backtrace/backtrace.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/HAL/shared/backtrace/unwarm.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/HAL/shared/backtrace/unwarm_arm.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/HAL/shared/backtrace/unwarm_thumb.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/HAL/shared/backtrace/unwarmbytab.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/HAL/shared/backtrace/unwarmmem.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/HAL/shared/backtrace/unwinder.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/HAL/shared/backtrace/unwmemaccess.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/HAL/shared/eeprom_api.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/HAL/shared/eeprom_i2c.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/HAL/shared/eeprom_spi.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/HAL/shared/servo.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/MarlinCore.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/core/multi_language.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/core/serial.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/core/utility.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/feature/babystep.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/feature/backlash.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/feature/baricuda.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/feature/bedlevel/abl/abl.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/feature/bedlevel/bedlevel.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/feature/bedlevel/mbl/mesh_bed_leveling.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/feature/bedlevel/ubl/ubl.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/feature/bedlevel/ubl/ubl_G29.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/feature/bedlevel/ubl/ubl_motion.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/feature/binary_protocol.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/feature/bltouch.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/feature/cancel_object.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/feature/caselight.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/feature/closedloop.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/feature/controllerfan.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/feature/dac/dac_dac084s085.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/feature/dac/dac_mcp4728.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/feature/dac/stepper_dac.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/feature/digipot/digipot_mcp4018.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/feature/digipot/digipot_mcp4451.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/feature/e_parser.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/feature/encoder_i2c.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/feature/fanmux.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/feature/filwidth.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/feature/fwretract.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/feature/host_actions.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/feature/joystick.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/feature/leds/blinkm.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/feature/leds/leds.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/feature/leds/neopixel.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/feature/leds/pca9632.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/feature/leds/printer_event_leds.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/feature/leds/tempstat.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/feature/max7219.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/feature/mixing.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/feature/mmu2/mmu2.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/feature/pause.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/feature/power.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/feature/powerloss.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/feature/probe_temp_comp.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/feature/runout.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/feature/snmm.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/feature/solenoid.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/feature/spindle_laser.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/feature/tmc_util.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/feature/touch/xpt2046.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/feature/twibus.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/feature/z_stepper_align.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/gcode/bedlevel/G26.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/gcode/bedlevel/G42.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/gcode/bedlevel/M420.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/gcode/bedlevel/abl/G29.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/gcode/bedlevel/abl/M421.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/gcode/bedlevel/mbl/G29.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/gcode/bedlevel/mbl/M421.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/gcode/bedlevel/ubl/G29.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/gcode/bedlevel/ubl/M421.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/gcode/calibrate/G28.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/gcode/calibrate/G33.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/gcode/calibrate/G34_M422.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/gcode/calibrate/G425.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/gcode/calibrate/G76_M871.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/gcode/calibrate/M100.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/gcode/calibrate/M12.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/gcode/calibrate/M425.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/gcode/calibrate/M48.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/gcode/calibrate/M665.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/gcode/calibrate/M666.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/gcode/calibrate/M852.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/gcode/config/M200-M205.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/gcode/config/M217.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/gcode/config/M218.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/gcode/config/M220.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/gcode/config/M221.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/gcode/config/M281.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/gcode/config/M301.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/gcode/config/M302.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/gcode/config/M304.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/gcode/config/M305.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/gcode/config/M43.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/gcode/config/M540.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/gcode/config/M575.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/gcode/config/M672.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/gcode/config/M92.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/gcode/control/M108_M112_M410.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/gcode/control/M111.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/gcode/control/M120_M121.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/gcode/control/M17_M18_M84.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/gcode/control/M211.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/gcode/control/M226.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/gcode/control/M280.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/gcode/control/M3-M5.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/gcode/control/M350_M351.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/gcode/control/M380_M381.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/gcode/control/M400.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/gcode/control/M42.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/gcode/control/M605.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/gcode/control/M7-M9.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/gcode/control/M80_M81.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/gcode/control/M85.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/gcode/control/M997.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/gcode/control/M999.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/gcode/control/T.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/gcode/eeprom/M500-M504.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/gcode/feature/L6470/M122.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/gcode/feature/L6470/M906.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/gcode/feature/L6470/M916-918.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/gcode/feature/advance/M900.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/gcode/feature/baricuda/M126-M129.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/gcode/feature/camera/M240.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/gcode/feature/cancel/M486.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/gcode/feature/caselight/M355.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/gcode/feature/clean/G12.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/gcode/feature/controllerfan/M710.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/gcode/feature/digipot/M907-M910.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/gcode/feature/filwidth/M404-M407.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/gcode/feature/fwretract/G10_G11.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/gcode/feature/fwretract/M207-M209.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/gcode/feature/i2c/M260_M261.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/gcode/feature/leds/M150.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/gcode/feature/leds/M7219.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/gcode/feature/macro/M810-M819.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/gcode/feature/mixing/M163-M165.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/gcode/feature/mixing/M166.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/gcode/feature/pause/G27.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/gcode/feature/pause/G60.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/gcode/feature/pause/G61.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/gcode/feature/pause/M125.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/gcode/feature/pause/M600.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/gcode/feature/pause/M603.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/gcode/feature/pause/M701_M702.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/gcode/feature/powerloss/M1000.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/gcode/feature/powerloss/M413.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/gcode/feature/prusa_MMU2/M403.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/gcode/feature/runout/M412.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/gcode/feature/trinamic/M122.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/gcode/feature/trinamic/M569.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/gcode/feature/trinamic/M906.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/gcode/feature/trinamic/M911-M914.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/gcode/gcode.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/gcode/geometry/G17-G19.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/gcode/geometry/G53-G59.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/gcode/geometry/G92.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/gcode/geometry/M206_M428.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/gcode/host/M110.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/gcode/host/M113.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/gcode/host/M114.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/gcode/host/M115.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/gcode/host/M118.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/gcode/host/M119.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/gcode/host/M16.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/gcode/host/M876.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/gcode/lcd/M0_M1.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/gcode/lcd/M117.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/gcode/lcd/M145.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/gcode/lcd/M250.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/gcode/lcd/M300.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/gcode/lcd/M73.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/gcode/motion/G0_G1.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/gcode/motion/G2_G3.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/gcode/motion/G4.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/gcode/motion/G5.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/gcode/motion/G80.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/gcode/motion/M290.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/gcode/parser.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/gcode/probe/G30.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/gcode/probe/G31_G32.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/gcode/probe/G38.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/gcode/probe/M401_M402.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/gcode/probe/M851.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/gcode/probe/M951.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/gcode/queue.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/gcode/scara/M360-M364.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/gcode/sd/M1001.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/gcode/sd/M20.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/gcode/sd/M21_M22.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/gcode/sd/M23.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/gcode/sd/M24_M25.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/gcode/sd/M26.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/gcode/sd/M27.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/gcode/sd/M28_M29.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/gcode/sd/M30.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/gcode/sd/M32.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/gcode/sd/M33.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/gcode/sd/M34.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/gcode/sd/M524.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/gcode/sd/M928.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/gcode/stats/M31.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/gcode/stats/M75-M78.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/gcode/temp/M104_M109.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/gcode/temp/M105.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/gcode/temp/M106_M107.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/gcode/temp/M140_M190.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/gcode/temp/M141_M191.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/gcode/temp/M155.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/gcode/temp/M303.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/gcode/units/G20_G21.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/gcode/units/M149.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/gcode/units/M82_M83.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/lcd/HD44780/lcdprint_hd44780.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/lcd/HD44780/ultralcd_HD44780.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/lcd/dogm/lcdprint_u8g.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/lcd/dogm/status_screen_DOGM.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/lcd/dogm/status_screen_lite_ST7920.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/lcd/dogm/u8g_dev_ssd1306_sh1106_128x64_I2C.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/lcd/dogm/u8g_dev_st7565_64128n_HAL.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/lcd/dogm/u8g_dev_st7920_128x64_HAL.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/lcd/dogm/u8g_dev_tft_320x240_upscale_from_128x64.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/lcd/dogm/u8g_dev_uc1701_mini12864_HAL.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/lcd/dogm/u8g_fontutf8.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/lcd/dogm/ultralcd_DOGM.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/lcd/dogm/ultralcd_st7920_u8glib_rrd_AVR.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/lcd/extui/lib/dgus/DGUSDisplay.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/lcd/extui/lib/dgus/fysetc/DGUSDisplayDef.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/lcd/extui/lib/dgus/hiprecy/DGUSDisplayDef.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/lcd/extui/lib/dgus/origin/DGUSDisplayDef.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/lcd/extui/lib/ftdi_eve_touch_ui/archim2-flash/flash_storage.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/lcd/extui/lib/ftdi_eve_touch_ui/archim2-flash/media_file_reader.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/lcd/extui/lib/ftdi_eve_touch_ui/ftdi_eve_lib/basic/commands.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/lcd/extui/lib/ftdi_eve_touch_ui/ftdi_eve_lib/basic/spi.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/lcd/extui/lib/ftdi_eve_touch_ui/ftdi_eve_lib/extended/command_processor.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/lcd/extui/lib/ftdi_eve_touch_ui/ftdi_eve_lib/extended/dl_cache.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/lcd/extui/lib/ftdi_eve_touch_ui/ftdi_eve_lib/extended/event_loop.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/lcd/extui/lib/ftdi_eve_touch_ui/ftdi_eve_lib/extended/screen_types.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/lcd/extui/lib/ftdi_eve_touch_ui/ftdi_eve_lib/extended/sound_player.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/lcd/extui/lib/ftdi_eve_touch_ui/ftdi_eve_lib/extended/text_box.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/lcd/extui/lib/ftdi_eve_touch_ui/ftdi_eve_lib/extended/tiny_timer.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/lcd/extui/lib/ftdi_eve_touch_ui/ftdi_eve_lib/extended/unicode/font_bitmaps.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/lcd/extui/lib/ftdi_eve_touch_ui/ftdi_eve_lib/extended/unicode/font_size_t.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/lcd/extui/lib/ftdi_eve_touch_ui/ftdi_eve_lib/extended/unicode/standard_char_set.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/lcd/extui/lib/ftdi_eve_touch_ui/ftdi_eve_lib/extended/unicode/unicode.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/lcd/extui/lib/ftdi_eve_touch_ui/ftdi_eve_lib/extended/unicode/western_char_set.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/lcd/extui/lib/ftdi_eve_touch_ui/language/language.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/lcd/extui/lib/ftdi_eve_touch_ui/marlin_events.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/lcd/extui/lib/ftdi_eve_touch_ui/screens/about_screen.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/lcd/extui/lib/ftdi_eve_touch_ui/screens/advanced_settings_menu.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/lcd/extui/lib/ftdi_eve_touch_ui/screens/alert_dialog_box.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/lcd/extui/lib/ftdi_eve_touch_ui/screens/backlash_compensation_screen.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/lcd/extui/lib/ftdi_eve_touch_ui/screens/base_numeric_adjustment_screen.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/lcd/extui/lib/ftdi_eve_touch_ui/screens/base_screen.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/lcd/extui/lib/ftdi_eve_touch_ui/screens/bio_advanced_settings.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/lcd/extui/lib/ftdi_eve_touch_ui/screens/bio_confirm_home_e.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/lcd/extui/lib/ftdi_eve_touch_ui/screens/bio_confirm_home_xyz.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/lcd/extui/lib/ftdi_eve_touch_ui/screens/bio_main_menu.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/lcd/extui/lib/ftdi_eve_touch_ui/screens/bio_printing_dialog_box.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/lcd/extui/lib/ftdi_eve_touch_ui/screens/bio_status_screen.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/lcd/extui/lib/ftdi_eve_touch_ui/screens/bio_tune_menu.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/lcd/extui/lib/ftdi_eve_touch_ui/screens/boot_screen.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/lcd/extui/lib/ftdi_eve_touch_ui/screens/case_light_screen.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/lcd/extui/lib/ftdi_eve_touch_ui/screens/change_filament_screen.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/lcd/extui/lib/ftdi_eve_touch_ui/screens/confirm_abort_print_dialog_box.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/lcd/extui/lib/ftdi_eve_touch_ui/screens/confirm_auto_calibration_dialog_box.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/lcd/extui/lib/ftdi_eve_touch_ui/screens/confirm_erase_flash_dialog_box.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/lcd/extui/lib/ftdi_eve_touch_ui/screens/confirm_start_print_dialog_box.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/lcd/extui/lib/ftdi_eve_touch_ui/screens/confirm_user_request_alert_box.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/lcd/extui/lib/ftdi_eve_touch_ui/screens/default_acceleration_screen.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/lcd/extui/lib/ftdi_eve_touch_ui/screens/developer_menu.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/lcd/extui/lib/ftdi_eve_touch_ui/screens/dialog_box_base_class.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/lcd/extui/lib/ftdi_eve_touch_ui/screens/display_tuning_screen.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/lcd/extui/lib/ftdi_eve_touch_ui/screens/endstop_state_screen.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/lcd/extui/lib/ftdi_eve_touch_ui/screens/feedrate_percent_screen.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/lcd/extui/lib/ftdi_eve_touch_ui/screens/filament_menu.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/lcd/extui/lib/ftdi_eve_touch_ui/screens/filament_runout_screen.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/lcd/extui/lib/ftdi_eve_touch_ui/screens/files_screen.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/lcd/extui/lib/ftdi_eve_touch_ui/screens/interface_settings_screen.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/lcd/extui/lib/ftdi_eve_touch_ui/screens/interface_sounds_screen.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/lcd/extui/lib/ftdi_eve_touch_ui/screens/jerk_screen.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/lcd/extui/lib/ftdi_eve_touch_ui/screens/junction_deviation_screen.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/lcd/extui/lib/ftdi_eve_touch_ui/screens/kill_screen.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/lcd/extui/lib/ftdi_eve_touch_ui/screens/language_menu.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/lcd/extui/lib/ftdi_eve_touch_ui/screens/linear_advance_screen.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/lcd/extui/lib/ftdi_eve_touch_ui/screens/lock_screen.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/lcd/extui/lib/ftdi_eve_touch_ui/screens/main_menu.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/lcd/extui/lib/ftdi_eve_touch_ui/screens/max_acceleration_screen.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/lcd/extui/lib/ftdi_eve_touch_ui/screens/max_velocity_screen.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/lcd/extui/lib/ftdi_eve_touch_ui/screens/media_player_screen.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/lcd/extui/lib/ftdi_eve_touch_ui/screens/move_axis_screen.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/lcd/extui/lib/ftdi_eve_touch_ui/screens/nozzle_offsets_screen.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/lcd/extui/lib/ftdi_eve_touch_ui/screens/nudge_nozzle_screen.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/lcd/extui/lib/ftdi_eve_touch_ui/screens/preheat_menu.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/lcd/extui/lib/ftdi_eve_touch_ui/screens/preheat_timer_screen.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/lcd/extui/lib/ftdi_eve_touch_ui/screens/restore_failsafe_dialog_box.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/lcd/extui/lib/ftdi_eve_touch_ui/screens/save_settings_dialog_box.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/lcd/extui/lib/ftdi_eve_touch_ui/screens/screens.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/lcd/extui/lib/ftdi_eve_touch_ui/screens/spinner_dialog_box.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/lcd/extui/lib/ftdi_eve_touch_ui/screens/statistics_screen.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/lcd/extui/lib/ftdi_eve_touch_ui/screens/status_screen.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/lcd/extui/lib/ftdi_eve_touch_ui/screens/stepper_bump_sensitivity_screen.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/lcd/extui/lib/ftdi_eve_touch_ui/screens/stepper_current_screen.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/lcd/extui/lib/ftdi_eve_touch_ui/screens/steps_screen.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/lcd/extui/lib/ftdi_eve_touch_ui/screens/stress_test_screen.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/lcd/extui/lib/ftdi_eve_touch_ui/screens/string_format.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/lcd/extui/lib/ftdi_eve_touch_ui/screens/temperature_screen.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/lcd/extui/lib/ftdi_eve_touch_ui/screens/touch_calibration_screen.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/lcd/extui/lib/ftdi_eve_touch_ui/screens/touch_registers_screen.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/lcd/extui/lib/ftdi_eve_touch_ui/screens/tune_menu.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/lcd/extui/lib/ftdi_eve_touch_ui/screens/widget_demo_screen.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/lcd/extui/lib/ftdi_eve_touch_ui/screens/z_offset_screen.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/lcd/extui/lib/ftdi_eve_touch_ui/theme/sounds.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/lcd/extui/ui_api.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/lcd/extui_dgus_lcd.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/lcd/extui_example.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/lcd/extui_malyan_lcd.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/lcd/fontutils.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/lcd/lcdprint.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/lcd/menu/game/brickout.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/lcd/menu/game/game.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/lcd/menu/game/invaders.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/lcd/menu/game/maze.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/lcd/menu/game/snake.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/lcd/menu/menu.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/lcd/menu/menu_advanced.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/lcd/menu/menu_backlash.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/lcd/menu/menu_bed_corners.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/lcd/menu/menu_bed_leveling.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/lcd/menu/menu_cancelobject.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/lcd/menu/menu_configuration.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/lcd/menu/menu_custom.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/lcd/menu/menu_delta_calibrate.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/lcd/menu/menu_filament.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/lcd/menu/menu_game.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/lcd/menu/menu_info.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/lcd/menu/menu_job_recovery.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/lcd/menu/menu_led.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/lcd/menu/menu_main.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/lcd/menu/menu_media.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/lcd/menu/menu_mixer.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/lcd/menu/menu_mmu2.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/lcd/menu/menu_motion.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/lcd/menu/menu_spindle_laser.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/lcd/menu/menu_temperature.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/lcd/menu/menu_tmc.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/lcd/menu/menu_tune.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/lcd/menu/menu_ubl.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/lcd/ultralcd.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/libs/L64XX/L64XX_Marlin.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/libs/buzzer.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/libs/crc16.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/libs/heatshrink/heatshrink_decoder.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/libs/hex_print_routines.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/libs/least_squares_fit.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/libs/nozzle.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/libs/numtostr.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/libs/stopwatch.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/libs/vector_3.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/module/configuration_store.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/module/delta.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/module/endstops.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/module/motion.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/module/planner.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/module/planner_bezier.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/module/printcounter.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/module/probe.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/module/scara.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/module/servo.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/module/stepper.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/module/stepper/L64xx.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/module/stepper/TMC26X.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/module/stepper/indirection.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/module/stepper/trinamic.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/module/temperature.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/module/tool_change.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/sd/Sd2Card.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/sd/SdBaseFile.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/sd/SdFatUtil.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/sd/SdFile.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/sd/SdVolume.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/sd/cardreader.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/sd/usb_flashdrive/Sd2Card_FlashDrive.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/sd/usb_flashdrive/lib-uhs2/Usb.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/sd/usb_flashdrive/lib-uhs2/masstorage.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/sd/usb_flashdrive/lib-uhs2/message.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/sd/usb_flashdrive/lib-uhs2/parsetools.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/src/src/sd/usb_flashdrive/lib-uhs2/usbhost.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/libb3d/LiquidCrystal/LiquidCrystal.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/lib6d0/SoftwareSerialM/HAL_softserial_LPC1768.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/lib6d0/SoftwareSerialM/HAL_softserial_SAMD51.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/lib6d0/SoftwareSerialM/HAL_softserial_STM32.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/lib6d0/SoftwareSerialM/HAL_softserial_STM32F1.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/lib6d0/SoftwareSerialM/SoftwareSerial.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/libfbe/TMCStepper_ID5513/source/CHOPCONF.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/libfbe/TMCStepper_ID5513/source/COOLCONF.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/libfbe/TMCStepper_ID5513/source/DRVCONF.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/libfbe/TMCStepper_ID5513/source/DRVCTRL.cpp.o
+Archiving .pio/build/STM32F103RC_fysetc/libb3d/libLiquidCrystal.a
+Indexing .pio/build/STM32F103RC_fysetc/libb3d/libLiquidCrystal.a
+Compiling .pio/build/STM32F103RC_fysetc/libfbe/TMCStepper_ID5513/source/DRVSTATUS.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/libfbe/TMCStepper_ID5513/source/DRV_CONF.cpp.o
+Archiving .pio/build/STM32F103RC_fysetc/lib6d0/libSoftwareSerialM.a
+Indexing .pio/build/STM32F103RC_fysetc/lib6d0/libSoftwareSerialM.a
+Compiling .pio/build/STM32F103RC_fysetc/libfbe/TMCStepper_ID5513/source/DRV_STATUS.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/libfbe/TMCStepper_ID5513/source/ENCMODE.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/libfbe/TMCStepper_ID5513/source/GCONF.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/libfbe/TMCStepper_ID5513/source/IHOLD_IRUN.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/libfbe/TMCStepper_ID5513/source/PWMCONF.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/libfbe/TMCStepper_ID5513/source/RAMP_STAT.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/libfbe/TMCStepper_ID5513/source/SERIAL_SWITCH.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/libfbe/TMCStepper_ID5513/source/SGCSCONF.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/libfbe/TMCStepper_ID5513/source/SHORT_CONF.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/libfbe/TMCStepper_ID5513/source/SMARTEN.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/libfbe/TMCStepper_ID5513/source/SW_MODE.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/libfbe/TMCStepper_ID5513/source/SW_SPI.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/libfbe/TMCStepper_ID5513/source/TMC2130Stepper.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/libfbe/TMCStepper_ID5513/source/TMC2160Stepper.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/libfbe/TMCStepper_ID5513/source/TMC2208Stepper.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/libfbe/TMCStepper_ID5513/source/TMC2209Stepper.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/libfbe/TMCStepper_ID5513/source/TMC2660Stepper.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/libfbe/TMCStepper_ID5513/source/TMC5130Stepper.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/libfbe/TMCStepper_ID5513/source/TMC5160Stepper.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/libfbe/TMCStepper_ID5513/source/TMCStepper.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/lib43a/Wire/SoftWire.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/lib43a/Wire/Wire.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/lib43a/Wire/utility/WireBase.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/lib9e8/U8glib-HAL_ID1932/U8glib.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/lib9e8/U8glib-HAL_ID1932/U8glibPrint.cpp.o
+Archiving .pio/build/STM32F103RC_fysetc/libfbe/libTMCStepper_ID5513.a
+Compiling .pio/build/STM32F103RC_fysetc/lib9e8/U8glib-HAL_ID1932/clib/chessengine.c.o
+Indexing .pio/build/STM32F103RC_fysetc/libfbe/libTMCStepper_ID5513.a
+Compiling .pio/build/STM32F103RC_fysetc/lib9e8/U8glib-HAL_ID1932/clib/u8g_bitmap.c.o
+Compiling .pio/build/STM32F103RC_fysetc/lib9e8/U8glib-HAL_ID1932/clib/u8g_circle.c.o
+Compiling .pio/build/STM32F103RC_fysetc/lib9e8/U8glib-HAL_ID1932/clib/u8g_clip.c.o
+Compiling .pio/build/STM32F103RC_fysetc/lib9e8/U8glib-HAL_ID1932/clib/u8g_com_api.c.o
+Archiving .pio/build/STM32F103RC_fysetc/lib43a/libWire.a
+Compiling .pio/build/STM32F103RC_fysetc/lib9e8/U8glib-HAL_ID1932/clib/u8g_com_api_16gr.c.o
+Indexing .pio/build/STM32F103RC_fysetc/lib43a/libWire.a
+Compiling .pio/build/STM32F103RC_fysetc/lib9e8/U8glib-HAL_ID1932/clib/u8g_com_arduino_attiny85_hw_spi.c.o
+Compiling .pio/build/STM32F103RC_fysetc/lib9e8/U8glib-HAL_ID1932/clib/u8g_com_arduino_common.c.o
+Compiling .pio/build/STM32F103RC_fysetc/lib9e8/U8glib-HAL_ID1932/clib/u8g_com_arduino_fast_parallel.c.o
+Compiling .pio/build/STM32F103RC_fysetc/lib9e8/U8glib-HAL_ID1932/clib/u8g_com_arduino_hw_spi.c.o
+Compiling .pio/build/STM32F103RC_fysetc/lib9e8/U8glib-HAL_ID1932/clib/u8g_com_arduino_hw_usart_spi.c.o
+Compiling .pio/build/STM32F103RC_fysetc/lib9e8/U8glib-HAL_ID1932/clib/u8g_com_arduino_no_en_parallel.c.o
+Compiling .pio/build/STM32F103RC_fysetc/lib9e8/U8glib-HAL_ID1932/clib/u8g_com_arduino_parallel.c.o
+Compiling .pio/build/STM32F103RC_fysetc/lib9e8/U8glib-HAL_ID1932/clib/u8g_com_arduino_port_d_wr.c.o
+Compiling .pio/build/STM32F103RC_fysetc/lib9e8/U8glib-HAL_ID1932/clib/u8g_com_arduino_ssd_i2c.c.o
+Compiling .pio/build/STM32F103RC_fysetc/lib9e8/U8glib-HAL_ID1932/clib/u8g_com_arduino_st7920_custom.c.o
+Compiling .pio/build/STM32F103RC_fysetc/lib9e8/U8glib-HAL_ID1932/clib/u8g_com_arduino_st7920_hw_spi.c.o
+Compiling .pio/build/STM32F103RC_fysetc/lib9e8/U8glib-HAL_ID1932/clib/u8g_com_arduino_st7920_spi.c.o
+Compiling .pio/build/STM32F103RC_fysetc/lib9e8/U8glib-HAL_ID1932/clib/u8g_com_arduino_std_sw_spi.c.o
+Compiling .pio/build/STM32F103RC_fysetc/lib9e8/U8glib-HAL_ID1932/clib/u8g_com_arduino_sw_spi.c.o
+Compiling .pio/build/STM32F103RC_fysetc/lib9e8/U8glib-HAL_ID1932/clib/u8g_com_arduino_t6963.c.o
+Compiling .pio/build/STM32F103RC_fysetc/lib9e8/U8glib-HAL_ID1932/clib/u8g_com_arduino_uc_i2c.c.o
+Compiling .pio/build/STM32F103RC_fysetc/lib9e8/U8glib-HAL_ID1932/clib/u8g_com_atmega_hw_spi.c.o
+Compiling .pio/build/STM32F103RC_fysetc/lib9e8/U8glib-HAL_ID1932/clib/u8g_com_atmega_parallel.c.o
+Compiling .pio/build/STM32F103RC_fysetc/lib9e8/U8glib-HAL_ID1932/clib/u8g_com_atmega_st7920_hw_spi.c.o
+Compiling .pio/build/STM32F103RC_fysetc/lib9e8/U8glib-HAL_ID1932/clib/u8g_com_atmega_st7920_spi.c.o
+Compiling .pio/build/STM32F103RC_fysetc/lib9e8/U8glib-HAL_ID1932/clib/u8g_com_atmega_sw_spi.c.o
+Compiling .pio/build/STM32F103RC_fysetc/lib9e8/U8glib-HAL_ID1932/clib/u8g_com_atxmega_hw_spi.c.o
+Compiling .pio/build/STM32F103RC_fysetc/lib9e8/U8glib-HAL_ID1932/clib/u8g_com_atxmega_st7920_hw_spi.c.o
+Compiling .pio/build/STM32F103RC_fysetc/lib9e8/U8glib-HAL_ID1932/clib/u8g_com_esp32_ssd_i2c_fn.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/lib9e8/U8glib-HAL_ID1932/clib/u8g_com_i2c.c.o
+Compiling .pio/build/STM32F103RC_fysetc/lib9e8/U8glib-HAL_ID1932/clib/u8g_com_io.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/lib9e8/U8glib-HAL_ID1932/clib/u8g_com_linux_ssd_i2c.c.o
+Compiling .pio/build/STM32F103RC_fysetc/lib9e8/U8glib-HAL_ID1932/clib/u8g_com_msp430_hw_spi.c.o
+Compiling .pio/build/STM32F103RC_fysetc/lib9e8/U8glib-HAL_ID1932/clib/u8g_com_null.c.o
+Compiling .pio/build/STM32F103RC_fysetc/lib9e8/U8glib-HAL_ID1932/clib/u8g_com_psoc5_ssd_hw_parallel.c.o
+Compiling .pio/build/STM32F103RC_fysetc/lib9e8/U8glib-HAL_ID1932/clib/u8g_com_raspberrypi_hw_spi.c.o
+Compiling .pio/build/STM32F103RC_fysetc/lib9e8/U8glib-HAL_ID1932/clib/u8g_com_raspberrypi_ssd_i2c.c.o
+Compiling .pio/build/STM32F103RC_fysetc/lib9e8/U8glib-HAL_ID1932/clib/u8g_com_samd51_hw_spi.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/lib9e8/U8glib-HAL_ID1932/clib/u8g_com_samd51_st7920_hw_spi.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/lib9e8/U8glib-HAL_ID1932/clib/u8g_com_std_sw_spi.c.o
+Compiling .pio/build/STM32F103RC_fysetc/lib9e8/U8glib-HAL_ID1932/clib/u8g_com_stm32duino_hw_spi.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/lib9e8/U8glib-HAL_ID1932/clib/u8g_com_stm32duino_ssd_i2c.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/lib9e8/U8glib-HAL_ID1932/clib/u8g_cursor.c.o
+Compiling .pio/build/STM32F103RC_fysetc/lib9e8/U8glib-HAL_ID1932/clib/u8g_delay.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/lib9e8/U8glib-HAL_ID1932/clib/u8g_dev_a2_micro_printer.c.o
+Compiling .pio/build/STM32F103RC_fysetc/lib9e8/U8glib-HAL_ID1932/clib/u8g_dev_flipdisc_2x7.c.o
+Compiling .pio/build/STM32F103RC_fysetc/lib9e8/U8glib-HAL_ID1932/clib/u8g_dev_gprof.c.o
+Compiling .pio/build/STM32F103RC_fysetc/lib9e8/U8glib-HAL_ID1932/clib/u8g_dev_ht1632.c.o
+Compiling .pio/build/STM32F103RC_fysetc/lib9e8/U8glib-HAL_ID1932/clib/u8g_dev_ili9325d_320x240.c.o
+Compiling .pio/build/STM32F103RC_fysetc/lib9e8/U8glib-HAL_ID1932/clib/u8g_dev_ks0108_128x64.c.o
+Compiling .pio/build/STM32F103RC_fysetc/lib9e8/U8glib-HAL_ID1932/clib/u8g_dev_lc7981_160x80.c.o
+Compiling .pio/build/STM32F103RC_fysetc/lib9e8/U8glib-HAL_ID1932/clib/u8g_dev_lc7981_240x128.c.o
+Compiling .pio/build/STM32F103RC_fysetc/lib9e8/U8glib-HAL_ID1932/clib/u8g_dev_lc7981_240x64.c.o
+Compiling .pio/build/STM32F103RC_fysetc/lib9e8/U8glib-HAL_ID1932/clib/u8g_dev_lc7981_320x64.c.o
+Compiling .pio/build/STM32F103RC_fysetc/lib9e8/U8glib-HAL_ID1932/clib/u8g_dev_ld7032_60x32.c.o
+Compiling .pio/build/STM32F103RC_fysetc/lib9e8/U8glib-HAL_ID1932/clib/u8g_dev_null.c.o
+Compiling .pio/build/STM32F103RC_fysetc/lib9e8/U8glib-HAL_ID1932/clib/u8g_dev_pcd8544_84x48.c.o
+Compiling .pio/build/STM32F103RC_fysetc/lib9e8/U8glib-HAL_ID1932/clib/u8g_dev_pcf8812_96x65.c.o
+Compiling .pio/build/STM32F103RC_fysetc/lib9e8/U8glib-HAL_ID1932/clib/u8g_dev_sbn1661_122x32.c.o
+Compiling .pio/build/STM32F103RC_fysetc/lib9e8/U8glib-HAL_ID1932/clib/u8g_dev_ssd1306_128x32.c.o
+Compiling .pio/build/STM32F103RC_fysetc/lib9e8/U8glib-HAL_ID1932/clib/u8g_dev_ssd1306_128x64.c.o
+Compiling .pio/build/STM32F103RC_fysetc/lib9e8/U8glib-HAL_ID1932/clib/u8g_dev_ssd1306_64x48.c.o
+Compiling .pio/build/STM32F103RC_fysetc/lib9e8/U8glib-HAL_ID1932/clib/u8g_dev_ssd1309_128x64.c.o
+Compiling .pio/build/STM32F103RC_fysetc/lib9e8/U8glib-HAL_ID1932/clib/u8g_dev_ssd1322_nhd31oled_bw.c.o
+Compiling .pio/build/STM32F103RC_fysetc/lib9e8/U8glib-HAL_ID1932/clib/u8g_dev_ssd1322_nhd31oled_gr.c.o
+Compiling .pio/build/STM32F103RC_fysetc/lib9e8/U8glib-HAL_ID1932/clib/u8g_dev_ssd1325_nhd27oled_bw.c.o
+Compiling .pio/build/STM32F103RC_fysetc/lib9e8/U8glib-HAL_ID1932/clib/u8g_dev_ssd1325_nhd27oled_bw_new.c.o
+Compiling .pio/build/STM32F103RC_fysetc/lib9e8/U8glib-HAL_ID1932/clib/u8g_dev_ssd1325_nhd27oled_gr.c.o
+Compiling .pio/build/STM32F103RC_fysetc/lib9e8/U8glib-HAL_ID1932/clib/u8g_dev_ssd1325_nhd27oled_gr_new.c.o
+Compiling .pio/build/STM32F103RC_fysetc/lib9e8/U8glib-HAL_ID1932/clib/u8g_dev_ssd1327_96x96_gr.c.o
+Compiling .pio/build/STM32F103RC_fysetc/lib9e8/U8glib-HAL_ID1932/clib/u8g_dev_ssd1351_128x128.c.o
+Compiling .pio/build/STM32F103RC_fysetc/lib9e8/U8glib-HAL_ID1932/clib/u8g_dev_ssd1353_160x128.c.o
+Compiling .pio/build/STM32F103RC_fysetc/lib9e8/U8glib-HAL_ID1932/clib/u8g_dev_st7565_64128n.c.o
+Compiling .pio/build/STM32F103RC_fysetc/lib9e8/U8glib-HAL_ID1932/clib/u8g_dev_st7565_dogm128.c.o
+Compiling .pio/build/STM32F103RC_fysetc/lib9e8/U8glib-HAL_ID1932/clib/u8g_dev_st7565_dogm132.c.o
+Compiling .pio/build/STM32F103RC_fysetc/lib9e8/U8glib-HAL_ID1932/clib/u8g_dev_st7565_lm6059.c.o
+Compiling .pio/build/STM32F103RC_fysetc/lib9e8/U8glib-HAL_ID1932/clib/u8g_dev_st7565_lm6063.c.o
+Compiling .pio/build/STM32F103RC_fysetc/lib9e8/U8glib-HAL_ID1932/clib/u8g_dev_st7565_nhd_c12832.c.o
+Compiling .pio/build/STM32F103RC_fysetc/lib9e8/U8glib-HAL_ID1932/clib/u8g_dev_st7565_nhd_c12864.c.o
+Compiling .pio/build/STM32F103RC_fysetc/lib9e8/U8glib-HAL_ID1932/clib/u8g_dev_st7687_c144mvgd.c.o
+Compiling .pio/build/STM32F103RC_fysetc/lib9e8/U8glib-HAL_ID1932/clib/u8g_dev_st7920_128x64.c.o
+Compiling .pio/build/STM32F103RC_fysetc/lib9e8/U8glib-HAL_ID1932/clib/u8g_dev_st7920_192x32.c.o
+Compiling .pio/build/STM32F103RC_fysetc/lib9e8/U8glib-HAL_ID1932/clib/u8g_dev_st7920_202x32.c.o
+Compiling .pio/build/STM32F103RC_fysetc/lib9e8/U8glib-HAL_ID1932/clib/u8g_dev_t6963_128x128.c.o
+Compiling .pio/build/STM32F103RC_fysetc/lib9e8/U8glib-HAL_ID1932/clib/u8g_dev_t6963_128x64.c.o
+Compiling .pio/build/STM32F103RC_fysetc/lib9e8/U8glib-HAL_ID1932/clib/u8g_dev_t6963_240x128.c.o
+Compiling .pio/build/STM32F103RC_fysetc/lib9e8/U8glib-HAL_ID1932/clib/u8g_dev_t6963_240x64.c.o
+Compiling .pio/build/STM32F103RC_fysetc/lib9e8/U8glib-HAL_ID1932/clib/u8g_dev_tls8204_84x48.c.o
+Compiling .pio/build/STM32F103RC_fysetc/lib9e8/U8glib-HAL_ID1932/clib/u8g_dev_uc1601_c128032.c.o
+Compiling .pio/build/STM32F103RC_fysetc/lib9e8/U8glib-HAL_ID1932/clib/u8g_dev_uc1608_240x128.c.o
+Compiling .pio/build/STM32F103RC_fysetc/lib9e8/U8glib-HAL_ID1932/clib/u8g_dev_uc1608_240x64.c.o
+Compiling .pio/build/STM32F103RC_fysetc/lib9e8/U8glib-HAL_ID1932/clib/u8g_dev_uc1610_dogxl160.c.o
+Compiling .pio/build/STM32F103RC_fysetc/lib9e8/U8glib-HAL_ID1932/clib/u8g_dev_uc1611_dogm240.c.o
+Compiling .pio/build/STM32F103RC_fysetc/lib9e8/U8glib-HAL_ID1932/clib/u8g_dev_uc1611_dogxl240.c.o
+Compiling .pio/build/STM32F103RC_fysetc/lib9e8/U8glib-HAL_ID1932/clib/u8g_dev_uc1701_dogs102.c.o
+Compiling .pio/build/STM32F103RC_fysetc/lib9e8/U8glib-HAL_ID1932/clib/u8g_dev_uc1701_mini12864.c.o
+Compiling .pio/build/STM32F103RC_fysetc/lib9e8/U8glib-HAL_ID1932/clib/u8g_ellipse.c.o
+Compiling .pio/build/STM32F103RC_fysetc/lib9e8/U8glib-HAL_ID1932/clib/u8g_font.c.o
+Compiling .pio/build/STM32F103RC_fysetc/lib9e8/U8glib-HAL_ID1932/clib/u8g_font_data.c.o
+Compiling .pio/build/STM32F103RC_fysetc/lib9e8/U8glib-HAL_ID1932/clib/u8g_line.c.o
+Compiling .pio/build/STM32F103RC_fysetc/lib9e8/U8glib-HAL_ID1932/clib/u8g_ll_api.c.o
+Compiling .pio/build/STM32F103RC_fysetc/lib9e8/U8glib-HAL_ID1932/clib/u8g_page.c.o
+Compiling .pio/build/STM32F103RC_fysetc/lib9e8/U8glib-HAL_ID1932/clib/u8g_pb.c.o
+Compiling .pio/build/STM32F103RC_fysetc/lib9e8/U8glib-HAL_ID1932/clib/u8g_pb14v1.c.o
+Compiling .pio/build/STM32F103RC_fysetc/lib9e8/U8glib-HAL_ID1932/clib/u8g_pb16h1.c.o
+Compiling .pio/build/STM32F103RC_fysetc/lib9e8/U8glib-HAL_ID1932/clib/u8g_pb16h2.c.o
+Compiling .pio/build/STM32F103RC_fysetc/lib9e8/U8glib-HAL_ID1932/clib/u8g_pb16v1.c.o
+Compiling .pio/build/STM32F103RC_fysetc/lib9e8/U8glib-HAL_ID1932/clib/u8g_pb16v2.c.o
+Compiling .pio/build/STM32F103RC_fysetc/lib9e8/U8glib-HAL_ID1932/clib/u8g_pb32h1.c.o
+Compiling .pio/build/STM32F103RC_fysetc/lib9e8/U8glib-HAL_ID1932/clib/u8g_pb8h1.c.o
+Compiling .pio/build/STM32F103RC_fysetc/lib9e8/U8glib-HAL_ID1932/clib/u8g_pb8h1f.c.o
+Compiling .pio/build/STM32F103RC_fysetc/lib9e8/U8glib-HAL_ID1932/clib/u8g_pb8h2.c.o
+Compiling .pio/build/STM32F103RC_fysetc/lib9e8/U8glib-HAL_ID1932/clib/u8g_pb8h8.c.o
+Compiling .pio/build/STM32F103RC_fysetc/lib9e8/U8glib-HAL_ID1932/clib/u8g_pb8v1.c.o
+Compiling .pio/build/STM32F103RC_fysetc/lib9e8/U8glib-HAL_ID1932/clib/u8g_pb8v2.c.o
+Compiling .pio/build/STM32F103RC_fysetc/lib9e8/U8glib-HAL_ID1932/clib/u8g_pbxh16.c.o
+Compiling .pio/build/STM32F103RC_fysetc/lib9e8/U8glib-HAL_ID1932/clib/u8g_pbxh24.c.o
+Compiling .pio/build/STM32F103RC_fysetc/lib9e8/U8glib-HAL_ID1932/clib/u8g_polygon.c.o
+Compiling .pio/build/STM32F103RC_fysetc/lib9e8/U8glib-HAL_ID1932/clib/u8g_rect.c.o
+Compiling .pio/build/STM32F103RC_fysetc/lib9e8/U8glib-HAL_ID1932/clib/u8g_rot.c.o
+Compiling .pio/build/STM32F103RC_fysetc/lib9e8/U8glib-HAL_ID1932/clib/u8g_scale.c.o
+Compiling .pio/build/STM32F103RC_fysetc/lib9e8/U8glib-HAL_ID1932/clib/u8g_state.c.o
+Compiling .pio/build/STM32F103RC_fysetc/lib9e8/U8glib-HAL_ID1932/clib/u8g_u16toa.c.o
+Compiling .pio/build/STM32F103RC_fysetc/lib9e8/U8glib-HAL_ID1932/clib/u8g_u8toa.c.o
+Compiling .pio/build/STM32F103RC_fysetc/lib9e8/U8glib-HAL_ID1932/clib/u8g_virtual_screen.c.o
+Compiling .pio/build/STM32F103RC_fysetc/lib9af/Adafruit BusIO_ID6214/Adafruit_BusIO_Register.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/lib9af/Adafruit BusIO_ID6214/Adafruit_I2CDevice.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/lib9af/Adafruit BusIO_ID6214/Adafruit_SPIDevice.cpp.o
+Compiling .pio/build/STM32F103RC_fysetc/liba67/Adafruit_MAX31865/Adafruit_MAX31865.cpp.o
+In file included from .pio/libdeps/STM32F103RC_fysetc/Adafruit BusIO_ID6214/Adafruit_BusIO_Register.h:2:0,
+                 from .pio/libdeps/STM32F103RC_fysetc/Adafruit BusIO_ID6214/Adafruit_BusIO_Register.cpp:1:
+.pio/libdeps/STM32F103RC_fysetc/Adafruit BusIO_ID6214/Adafruit_SPIDevice.h:38:43: error: 'SPI_BITORDER_MSBFIRST' was not declared in this scope
+                      BitOrder dataOrder = SPI_BITORDER_MSBFIRST,
+                                           ^~~~~~~~~~~~~~~~~~~~~
+Compiling .pio/build/STM32F103RC_fysetc/lib79d/LiquidTWI2/LiquidTWI2.cpp.o
+.pio/libdeps/STM32F103RC_fysetc/Adafruit BusIO_ID6214/Adafruit_SPIDevice.h:38:43: note: suggested alternative: 'SPI_CR1_LSBFIRST'
+                      BitOrder dataOrder = SPI_BITORDER_MSBFIRST,
+                                           ^~~~~~~~~~~~~~~~~~~~~
+                                           SPI_CR1_LSBFIRST
+.pio/libdeps/STM32F103RC_fysetc/Adafruit BusIO_ID6214/Adafruit_SPIDevice.h:43:43: error: 'SPI_BITORDER_MSBFIRST' was not declared in this scope
+                      BitOrder dataOrder = SPI_BITORDER_MSBFIRST,
+                                           ^~~~~~~~~~~~~~~~~~~~~
+.pio/libdeps/STM32F103RC_fysetc/Adafruit BusIO_ID6214/Adafruit_SPIDevice.h:43:43: note: suggested alternative: 'SPI_CR1_LSBFIRST'
+                      BitOrder dataOrder = SPI_BITORDER_MSBFIRST,
+                                           ^~~~~~~~~~~~~~~~~~~~~
+                                           SPI_CR1_LSBFIRST
+.pio/libdeps/STM32F103RC_fysetc/Adafruit BusIO_ID6214/Adafruit_I2CDevice.cpp: In member function 'bool Adafruit_I2CDevice::read(uint8_t*, size_t, bool)':
+.pio/libdeps/STM32F103RC_fysetc/Adafruit BusIO_ID6214/Adafruit_I2CDevice.cpp:160:79: error: no matching function for call to 'TwoWire::requestFrom(uint8_t, uint8_t, uint8_t)'
+   size_t recv = _wire->requestFrom((uint8_t)_addr, (uint8_t)len, (uint8_t)stop);
+                                                                               ^
+In file included from /Users/outcastzeroone/.platformio/packages/framework-arduinoststm32-maple/STM32F1/libraries/Wire/Wire.h:42:0,
+                 from .pio/libdeps/STM32F103RC_fysetc/Adafruit BusIO_ID6214/Adafruit_I2CDevice.h:1,
+                 from .pio/libdeps/STM32F103RC_fysetc/Adafruit BusIO_ID6214/Adafruit_I2CDevice.cpp:1:
+/Users/outcastzeroone/.platformio/packages/framework-arduinoststm32-maple/STM32F1/libraries/Wire/utility/WireBase.h:101:11: note: candidate: uint8 WireBase::requestFrom(uint8, int)
+     uint8 requestFrom(uint8, int);
+           ^~~~~~~~~~~
+/Users/outcastzeroone/.platformio/packages/framework-arduinoststm32-maple/STM32F1/libraries/Wire/utility/WireBase.h:101:11: note:   candidate expects 2 arguments, 3 provided
+/Users/outcastzeroone/.platformio/packages/framework-arduinoststm32-maple/STM32F1/libraries/Wire/utility/WireBase.h:106:11: note: candidate: uint8 WireBase::requestFrom(int, int)
+     uint8 requestFrom(int, int);
+           ^~~~~~~~~~~
+/Users/outcastzeroone/.platformio/packages/framework-arduinoststm32-maple/STM32F1/libraries/Wire/utility/WireBase.h:106:11: note:   candidate expects 2 arguments, 3 provided
+Compiling .pio/build/STM32F103RC_fysetc/lib700/Arduino-L6470/L6470.cpp.o
+In file included from .pio/libdeps/STM32F103RC_fysetc/Adafruit BusIO_ID6214/Adafruit_SPIDevice.cpp:1:0:
+.pio/libdeps/STM32F103RC_fysetc/Adafruit BusIO_ID6214/Adafruit_SPIDevice.h:38:43: error: 'SPI_BITORDER_MSBFIRST' was not declared in this scope
+                      BitOrder dataOrder = SPI_BITORDER_MSBFIRST,
+                                           ^~~~~~~~~~~~~~~~~~~~~
+.pio/libdeps/STM32F103RC_fysetc/Adafruit BusIO_ID6214/Adafruit_SPIDevice.h:38:43: note: suggested alternative: 'SPI_CR1_LSBFIRST'
+                      BitOrder dataOrder = SPI_BITORDER_MSBFIRST,
+                                           ^~~~~~~~~~~~~~~~~~~~~
+                                           SPI_CR1_LSBFIRST
+.pio/libdeps/STM32F103RC_fysetc/Adafruit BusIO_ID6214/Adafruit_SPIDevice.h:43:43: error: 'SPI_BITORDER_MSBFIRST' was not declared in this scope
+                      BitOrder dataOrder = SPI_BITORDER_MSBFIRST,
+                                           ^~~~~~~~~~~~~~~~~~~~~
+.pio/libdeps/STM32F103RC_fysetc/Adafruit BusIO_ID6214/Adafruit_SPIDevice.h:43:43: note: suggested alternative: 'SPI_CR1_LSBFIRST'
+                      BitOrder dataOrder = SPI_BITORDER_MSBFIRST,
+                                           ^~~~~~~~~~~~~~~~~~~~~
+                                           SPI_CR1_LSBFIRST
+.pio/libdeps/STM32F103RC_fysetc/Adafruit BusIO_ID6214/Adafruit_SPIDevice.cpp: In member function 'void Adafruit_SPIDevice::transfer(uint8_t*, size_t)':
+.pio/libdeps/STM32F103RC_fysetc/Adafruit BusIO_ID6214/Adafruit_SPIDevice.cpp:99:31: error: no matching function for call to 'SPIClass::transfer(uint8_t*&, size_t&)'
+Compiling .pio/build/STM32F103RC_fysetc/libee5/SailfishLCD/SailfishLCD.cpp.o
+     _spi->transfer(buffer, len);
+                               ^
+In file included from .pio/libdeps/STM32F103RC_fysetc/Adafruit BusIO_ID6214/Adafruit_SPIDevice.h:1:0,
+                 from .pio/libdeps/STM32F103RC_fysetc/Adafruit BusIO_ID6214/Adafruit_SPIDevice.cpp:1:
+Marlin/src/HAL/STM32F1/SPI.h:268:11: note: candidate: uint8_t SPIClass::transfer(uint8_t) const
+   uint8_t transfer(uint8_t data) const;
+           ^~~~~~~~
+Marlin/src/HAL/STM32F1/SPI.h:268:11: note:   candidate expects 1 argument, 2 provided
+.pio/libdeps/STM32F103RC_fysetc/Adafruit BusIO_ID6214/Adafruit_SPIDevice.cpp:115:23: error: 'SPI_BITORDER_LSBFIRST' was not declared in this scope
+     if (_dataOrder == SPI_BITORDER_LSBFIRST) {
+                       ^~~~~~~~~~~~~~~~~~~~~
+*** [.pio/build/STM32F103RC_fysetc/lib9af/Adafruit BusIO_ID6214/Adafruit_I2CDevice.cpp.o] Error 1
+*** [.pio/build/STM32F103RC_fysetc/lib9af/Adafruit BusIO_ID6214/Adafruit_BusIO_Register.cpp.o] Error 1
+.pio/libdeps/STM32F103RC_fysetc/Adafruit BusIO_ID6214/Adafruit_SPIDevice.cpp:115:23: note: suggested alternative: 'SPI_CR1_LSBFIRST'
+     if (_dataOrder == SPI_BITORDER_LSBFIRST) {
+                       ^~~~~~~~~~~~~~~~~~~~~
+                       SPI_CR1_LSBFIRST
+.pio/libdeps/STM32F103RC_fysetc/Adafruit BusIO_ID6214/Adafruit_SPIDevice.cpp:149:23: error: 'SPI_BITORDER_LSBFIRST' was not declared in this scope
+     if (_dataOrder == SPI_BITORDER_LSBFIRST) {
+                       ^~~~~~~~~~~~~~~~~~~~~
+In file included from .pio/libdeps/STM32F103RC_fysetc/Adafruit_MAX31865/Adafruit_MAX31865.h:55:0,
+                 from .pio/libdeps/STM32F103RC_fysetc/Adafruit_MAX31865/Adafruit_MAX31865.cpp:17:
+.pio/libdeps/STM32F103RC_fysetc/Adafruit BusIO_ID6214/Adafruit_SPIDevice.h:38:43: error: 'SPI_BITORDER_MSBFIRST' was not declared in this scope
+                      BitOrder dataOrder = SPI_BITORDER_MSBFIRST,
+                                           ^~~~~~~~~~~~~~~~~~~~~
+.pio/libdeps/STM32F103RC_fysetc/Adafruit BusIO_ID6214/Adafruit_SPIDevice.cpp:149:23: note: suggested alternative: 'SPI_CR1_LSBFIRST'
+     if (_dataOrder == SPI_BITORDER_LSBFIRST) {
+                       ^~~~~~~~~~~~~~~~~~~~~
+                       SPI_CR1_LSBFIRST
+.pio/libdeps/STM32F103RC_fysetc/Adafruit BusIO_ID6214/Adafruit_SPIDevice.h:38:43: note: suggested alternative: 'SPI_CR1_LSBFIRST'
+                      BitOrder dataOrder = SPI_BITORDER_MSBFIRST,
+                                           ^~~~~~~~~~~~~~~~~~~~~
+                                           SPI_CR1_LSBFIRST
+.pio/libdeps/STM32F103RC_fysetc/Adafruit BusIO_ID6214/Adafruit_SPIDevice.h:43:43: error: 'SPI_BITORDER_MSBFIRST' was not declared in this scope
+                      BitOrder dataOrder = SPI_BITORDER_MSBFIRST,
+                                           ^~~~~~~~~~~~~~~~~~~~~
+*** [.pio/build/STM32F103RC_fysetc/lib9af/Adafruit BusIO_ID6214/Adafruit_SPIDevice.cpp.o] Error 1
+.pio/libdeps/STM32F103RC_fysetc/Adafruit BusIO_ID6214/Adafruit_SPIDevice.h:43:43: note: suggested alternative: 'SPI_CR1_LSBFIRST'
+                      BitOrder dataOrder = SPI_BITORDER_MSBFIRST,
+                                           ^~~~~~~~~~~~~~~~~~~~~
+                                           SPI_CR1_LSBFIRST
+In file included from .pio/libdeps/STM32F103RC_fysetc/Adafruit_MAX31865/Adafruit_MAX31865.cpp:17:0:
+.pio/libdeps/STM32F103RC_fysetc/Adafruit_MAX31865/Adafruit_MAX31865.h:84:32: warning: passing NULL to non-pointer argument 1 of 'Adafruit_SPIDevice::Adafruit_SPIDevice(int8_t, uint32_t, BitOrder, uint8_t, SPIClass*)' [-Wconversion-null]
+   Adafruit_SPIDevice spi_dev = NULL;
+                                ^~~~
+In file included from /Users/outcastzeroone/.platformio/packages/toolchain-gccarmnoneeabi/arm-none-eabi/include/inttypes.h:22:0,
+                 from /Users/outcastzeroone/.platformio/packages/framework-arduinoststm32-maple/STM32F1/cores/maple/avr/pgmspace.h:4,
+                 from /Users/outcastzeroone/.platformio/packages/framework-arduinoststm32-maple/STM32F1/cores/maple/WString.h:29,
+                 from /Users/outcastzeroone/.platformio/packages/framework-arduinoststm32-maple/STM32F1/cores/maple/wirish.h:47,
+                 from /Users/outcastzeroone/.platformio/packages/framework-arduinoststm32-maple/STM32F1/cores/maple/Arduino.h:30,
+                 from .pio/libdeps/STM32F103RC_fysetc/Adafruit_MAX31865/Adafruit_MAX31865.h:50,
+                 from .pio/libdeps/STM32F103RC_fysetc/Adafruit_MAX31865/Adafruit_MAX31865.cpp:17:
+.pio/libdeps/STM32F103RC_fysetc/Adafruit_MAX31865/Adafruit_MAX31865.h:84:32: error: call to 'Adafruit_SPIDevice::Adafruit_SPIDevice(int8_t, uint32_t, BitOrder, uint8_t, SPIClass*)' uses the default argument for parameter 3, which is not yet defined
+   Adafruit_SPIDevice spi_dev = NULL;
+                                ^
+.pio/libdeps/STM32F103RC_fysetc/Adafruit_MAX31865/Adafruit_MAX31865.cpp: In constructor 'Adafruit_MAX31865::Adafruit_MAX31865(int8_t, int8_t, int8_t, int8_t)':
+.pio/libdeps/STM32F103RC_fysetc/Adafruit_MAX31865/Adafruit_MAX31865.cpp:38:76: error: call to 'Adafruit_SPIDevice::Adafruit_SPIDevice(int8_t, int8_t, int8_t, int8_t, uint32_t, BitOrder, uint8_t)' uses the default argument for parameter 6, which is not yet defined
+   spi_dev = Adafruit_SPIDevice(spi_cs, spi_clk, spi_miso, spi_mosi, 1000000);
+                                                                            ^
+.pio/libdeps/STM32F103RC_fysetc/Adafruit_MAX31865/Adafruit_MAX31865.cpp: In constructor 'Adafruit_MAX31865::Adafruit_MAX31865(int8_t)':
+.pio/libdeps/STM32F103RC_fysetc/Adafruit_MAX31865/Adafruit_MAX31865.cpp:49:43: error: 'SPI_BITORDER_MSBFIRST' was not declared in this scope
+       Adafruit_SPIDevice(spi_cs, 1000000, SPI_BITORDER_MSBFIRST, SPI_MODE1);
+                                           ^~~~~~~~~~~~~~~~~~~~~
+.pio/libdeps/STM32F103RC_fysetc/Adafruit_MAX31865/Adafruit_MAX31865.cpp:49:43: note: suggested alternative: 'SPI_CR1_LSBFIRST'
+       Adafruit_SPIDevice(spi_cs, 1000000, SPI_BITORDER_MSBFIRST, SPI_MODE1);
+                                           ^~~~~~~~~~~~~~~~~~~~~
+                                           SPI_CR1_LSBFIRST
+*** [.pio/build/STM32F103RC_fysetc/liba67/Adafruit_MAX31865/Adafruit_MAX31865.cpp.o] Error 1
+=================================================================================== [FAILED] Took 105.81 seconds ===================================================================================
+
+Environment               Status    Duration
+------------------------  --------  ------------
+mega2560                  IGNORED
+mega1280                  IGNORED
+rambo                     IGNORED
+FYSETC_F6_13              IGNORED
+FYSETC_F6_14              IGNORED
+sanguino644p              IGNORED
+sanguino1284p             IGNORED
+melzi                     IGNORED
+melzi_optiboot            IGNORED
+at90usb1286_cdc           IGNORED
+at90usb1286_dfu           IGNORED
+DUE                       IGNORED
+DUE_USB                   IGNORED
+DUE_debug                 IGNORED
+LPC1768                   IGNORED
+LPC1769                   IGNORED
+STM32F103RC               IGNORED
+STM32F103RC_fysetc        FAILED    00:01:45.806
+STM32F103RC_btt           IGNORED
+STM32F103RC_btt_USB       IGNORED
+STM32F103RC_btt_512K      IGNORED
+STM32F103RC_btt_512K_USB  IGNORED
+STM32F103RE               IGNORED
+STM32F103RE_btt           IGNORED
+STM32F103RE_btt_USB       IGNORED
+STM32F4                   IGNORED
+STM32F7                   IGNORED
+ARMED                     IGNORED
+STM32F103VE_GTM32         IGNORED
+STM32F103VE_longer        IGNORED
+mks_robin_mini            IGNORED
+mks_robin_nano            IGNORED
+mks_robin                 IGNORED
+mks_robin_pro             IGNORED
+mks_robin_lite            IGNORED
+mks_robin_lite3           IGNORED
+jgaurora_a5s_a1           IGNORED
+STM32F103CB_malyan        IGNORED
+chitu_f103                IGNORED
+STM32F401VE_STEVAL        IGNORED
+FLYF407ZG                 IGNORED
+FYSETC_S6                 IGNORED
+STM32F407VE_black         IGNORED
+BIGTREE_SKR_PRO           IGNORED
+BIGTREE_GTR_V1_0          IGNORED
+BIGTREE_BTT002            IGNORED
+teensy31                  IGNORED
+teensy35                  IGNORED
+esp32                     IGNORED
+linux_native              IGNORED
+SAMD51_grandcentral_m4    IGNORED
+rumba32_f446ve            IGNORED
+rumba32_mks               IGNORED
+include_tree              IGNORED
+============================================================================== 1 failed, 0 succeeded in 00:01:45.806 ==============================================================================
+The terminal process terminated with exit code: 1
+
+Terminal will be reused by tasks, press any key to close it.
